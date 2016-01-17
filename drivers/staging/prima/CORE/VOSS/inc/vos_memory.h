@@ -223,7 +223,6 @@ v_BOOL_t vos_mem_compare(
 #endif
                           v_U32_t numBytes);
 
-
 /** ---------------------------------------------------------------------------
 
     \fn vos_mem_compare2()
