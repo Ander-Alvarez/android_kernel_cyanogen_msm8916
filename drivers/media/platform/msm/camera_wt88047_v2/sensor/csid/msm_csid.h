@@ -90,3 +90,4 @@ struct csid_device {
 #define VIDIOC_MSM_CSID_RELEASE \
 	_IOWR('V', BASE_VIDIOC_PRIVATE + 5, struct v4l2_subdev*)
 #endif
+

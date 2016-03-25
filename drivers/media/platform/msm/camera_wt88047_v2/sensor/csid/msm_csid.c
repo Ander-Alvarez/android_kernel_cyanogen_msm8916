@@ -825,3 +825,4 @@ module_init(msm_csid_init_module);
 module_exit(msm_csid_exit_module);
 MODULE_DESCRIPTION("MSM CSID driver");
 MODULE_LICENSE("GPL v2");
+
