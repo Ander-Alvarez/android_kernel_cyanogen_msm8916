@@ -36,10 +36,6 @@
 #include <linux/errno.h>
 #endif
 
-#ifdef CONFIG_TOUCHSCREEN_DOUBLETAP2WAKE
-#include <linux/input/doubletap2wake.h>
-#endif
-
 #include "synaptics_i2c_rmi4.h"
 #include <linux/input/mt.h>
 #include "lct_tp_fm_info.h"
@@ -4084,15 +4080,6 @@ static int fb_notifier_callback(struct notifier_block *self,
 	int *blank;
 	struct synaptics_rmi4_data *rmi4_data =
 		container_of(self, struct synaptics_rmi4_data, fb_notif);
-
-#ifdef CONFIG_TOUCHSCREEN_DOUBLETAP2WAKE
-	bool prevent_sleep = (dt2w_switch > 0);
-			if (prevent_sleep) {
-				pr_debug("suspend avoided!\n");
-				synaptics_dsx_enable_wakeup_source(rmi4_data, true);
-				return 0;
-			} else {
-#endif
 
 	if (evdata && evdata->data && rmi4_data && rmi4_data->i2c_client) {
 		if (event == FB_EARLY_EVENT_BLANK)
