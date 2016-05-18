@@ -63,7 +63,7 @@
 const tANI_U8 P2pOui[] = {0x50, 0x6F, 0x9A, 0x9};
 
 
-tSirRetStatus schGetP2pIeOffset(tANI_U8 *pExtraIe, tANI_U32 extraIeLen, tANI_U16 *pP2pIeOffset)
+tSirRetStatus 3(tANI_U8 *pExtraIe, tANI_U32 extraIeLen, tANI_U16 *pP2pIeOffset)
 {
     tSirRetStatus status = eSIR_FAILURE;   
     *pP2pIeOffset = 0;

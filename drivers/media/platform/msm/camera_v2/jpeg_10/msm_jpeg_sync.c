@@ -191,7 +191,7 @@ inline int msm_jpeg_q_in_buf(struct msm_jpeg_q *q_p,
 	return 0;
 }
 
-static inline int msm_jpeg_q_wait(struct msm_jpeg_q *q_p)
+inline int msm_jpeg_q_wait(struct msm_jpeg_q *q_p)
 {
 	long tm = MAX_SCHEDULE_TIMEOUT; /* 500ms */
 	int rc;
