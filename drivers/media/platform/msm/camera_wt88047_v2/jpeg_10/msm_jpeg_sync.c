@@ -1290,3 +1290,4 @@ int __msm_jpeg_exit(struct msm_jpeg_device *pgmn_dev)
 	kfree(pgmn_dev);
 	return 0;
 }
+

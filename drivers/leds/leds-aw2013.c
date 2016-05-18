@@ -246,7 +246,7 @@ static int aw2013_power_init(struct aw2013_led *led, bool on)
 		regulator_put(led->vdd);
 #endif
 
-		if (!led->pdata->awgpio <= 0) {
+		if (!(led->pdata->awgpio <= 0)) {
 			if (regulator_count_voltages(led->vcc) > 0)
 				regulator_set_voltage(led->vcc, 0, AW2013_VI2C_MAX_UV);
 
@@ -742,3 +742,4 @@ module_exit(aw2013_led_exit);
 
 MODULE_DESCRIPTION("AWINIC aw2013 LED driver");
 MODULE_LICENSE("GPL v2");
+
