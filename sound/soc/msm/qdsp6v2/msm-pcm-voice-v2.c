@@ -595,6 +595,9 @@ static struct snd_kcontrol_new msm_voice_controls[] = {
 			     msm_voice_topology_disable_put),
 	SOC_SINGLE_MULTI_EXT("HD Voice Enable", SND_SOC_NOPM, 0, VSID_MAX, 0, 2,
 			     NULL, msm_voice_hd_voice_put),
+        // Dummy control to expose stereo recording support in kernel to user-space
+	SOC_SINGLE_EXT("Stereo Recording", SND_SOC_NOPM, 1, VSID_MAX, 0, NULL, NULL),
+
 	{
 		.access = SNDRV_CTL_ELEM_ACCESS_READ,
 		.iface	= SNDRV_CTL_ELEM_IFACE_MIXER,
